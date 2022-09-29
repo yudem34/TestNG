@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import utilities.Driver;
 import utilities.TestBaseBeforMethodAfterMethod;
+import utilities.TestBaseBeforeClassAfterClass;
 
-public class C00_Odev extends TestBaseBeforMethodAfterMethod {
+public class C00_Odev extends TestBaseBeforeClassAfterClass {
     SoftAssert softAssert = new SoftAssert();
 
     @Test
@@ -24,7 +25,6 @@ public class C00_Odev extends TestBaseBeforMethodAfterMethod {
     public void test02() {
         // Test : 1.Test basarili ise search Box’i kullanarak “Nutella” icin
         // arama yapin ve aramanizin gerceklestigini Test edin
-        driver.get("https://amazon.com");
         WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella", Keys.ENTER);
         WebElement sonucElementi = driver.findElement(By.xpath("//*[@class='a-section a-spacing-small a-spacing-top-small']"));
@@ -34,11 +34,6 @@ public class C00_Odev extends TestBaseBeforMethodAfterMethod {
 
     @Test (dependsOnMethods = "test02")
     public void test03() {
-        driver.get("https://amazon.com");
-        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
-        aramaKutusu.sendKeys("Nutella", Keys.ENTER);
-        WebElement sonucElementi = driver.findElement(By.xpath("//*[@class='a-section a-spacing-small a-spacing-top-small']"));
-        softAssert.assertTrue(sonucElementi.getText().contains("Nutella"), "eslesme olmadi");
         // Test : “Nutella” icin arama yapildiysa ilk urunu tiklayin ve fiyatinin
         // $16.83 oldugunu test edin
         WebElement ilk=driver.findElement(By.xpath("(//*[@class='a-section aok-relative s-image-square-aspect'])[1]"));
