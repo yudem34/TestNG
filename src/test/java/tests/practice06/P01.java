@@ -42,5 +42,14 @@ public class P01 {
         -Aradigimiz bir web elementi ya da bir methodu kolaylikla bulabilmek ve guncelleyebilmek icin javadan
         ogrenmis oldugumuz OOP Concept Selenium ile page object modelde birlestirilmis oluyor.
         */
+
+       // PageFactory bizlere nesne deposu oluşturmaya imkan veren, sürdürülebilir,
+       // yeniden kullanılabilir ve elementleri tek bir yerden yönetmeyi sağlayan bir Page object model konseptidir.
+       // Page Factory’i kullanımına bakacak olursak PageFactory model, Web elementlerini
+       // @FindBy annotionu ile algılar. How kalıbı ile birlikte elementlerin ayırt edici
+       // locator’ından hangisini kullanacaksak belirtilir. Sonrasında ise o ayırt edici
+       // locator’ın adı tanımlanır. Public WebElement ile birlikte test senaryolarında
+       // kullanmak üzere isimlendirmesi yaparız. Burada isimlendirme daha sonra baktığında
+       // anlayabilmek için önemlidir, okunaklı olmalıdır.
     }
 }
