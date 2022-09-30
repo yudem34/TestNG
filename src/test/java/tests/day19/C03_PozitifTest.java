@@ -1,4 +1,4 @@
-package tests.day18;
+package tests.day19;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import pages.HotelMyCamp;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C03_ConfigReaderSoru {
+public class C03_PozitifTest {
     @Test
     public void test01() {
         // https://www.hotelmycamp.com adresine git

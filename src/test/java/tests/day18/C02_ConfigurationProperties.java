@@ -11,11 +11,11 @@ public class C02_ConfigurationProperties {
     public void test01() {
 
         // Amazona gidelim
-        String amzUrl=ConfigReader.getProperty("amzUrl");
+        String amzUrl=ConfigReader.getProperty("amazon");
         Driver.getDriver().get(amzUrl);
 
         // Facebook'a  gidelim
-        String faceUrl=ConfigReader.getProperty("faceUrl");
+        String faceUrl=ConfigReader.getProperty("facebook");
         Driver.getDriver().get(faceUrl);
         // Yanlis email ve sifre ile giris yapalım
         FacebookPage facebookPage=new FacebookPage();
