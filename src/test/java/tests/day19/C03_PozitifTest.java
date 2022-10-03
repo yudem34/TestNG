@@ -21,7 +21,7 @@ public class C03_PozitifTest {
         hotelMyCamp.password.sendKeys(ConfigReader.getProperty("hmcPassword"));
         hotelMyCamp.loginButton.click();
         // Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        Assert.assertTrue(hotelMyCamp.girisTesti.isDisplayed());
+        Assert.assertTrue(hotelMyCamp.pozitifTest.isDisplayed());
         Driver.closeDriver();
 
     }

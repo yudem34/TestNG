@@ -1,4 +1,4 @@
-package automationexercise;
+package tests.automationexercise;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

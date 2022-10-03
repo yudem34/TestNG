@@ -1,4 +1,4 @@
-package tests.day19;
+package tests.day20_SmokeTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import pages.HotelMyCamp;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C03_NegatifTest {
+public class C01_SmokePozitifTest {
     @Test
     public void test01() {
         // https://www.hotelmycamp.com adresine git
@@ -15,14 +15,13 @@ public class C03_NegatifTest {
         HotelMyCamp hotelMyCamp=new HotelMyCamp();
         // login butonuna bas
         hotelMyCamp.login.click();
-
-        // test data yanlis username: manager55,
-        // test data yanlis password : Manageer1.
-        hotelMyCamp.username.sendKeys(ConfigReader.getProperty("wrongHcmUserName"));
-        hotelMyCamp.password.sendKeys(ConfigReader.getProperty("wrongHcmPassword"));
+        // test data username: manager,
+        // test data password : Manager1!
+        hotelMyCamp.username.sendKeys(ConfigReader.getProperty("hmcUserName"));
+        hotelMyCamp.password.sendKeys(ConfigReader.getProperty("hmcPassword"));
         hotelMyCamp.loginButton.click();
         // Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        Assert.assertTrue(hotelMyCamp.hataliGiris.isDisplayed());
+        Assert.assertTrue(hotelMyCamp.pozitifTest.isDisplayed());
         Driver.closeDriver();
 
     }

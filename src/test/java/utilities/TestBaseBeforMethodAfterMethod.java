@@ -36,7 +36,7 @@ public abstract class TestBaseBeforMethodAfterMethod {
 
     @AfterMethod
     public void tearDown() {
-       // driver.quit();
+       driver.quit();
     }
 }
 
