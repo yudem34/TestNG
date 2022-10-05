@@ -36,7 +36,8 @@ public class Soru21 {
         Assert.assertTrue(autoE.allProduct.isDisplayed());
         // 5. Click on 'View Product' button
         Actions actions=new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.moveToElement(autoE.iframe).click().perform();
+        Thread.sleep(2000);
         autoE.firstviewProduct.click();
         // 6. Verify 'Write Your Review' is visible
         Assert.assertTrue(autoE.writeYourReview.isDisplayed());

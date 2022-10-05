@@ -13,7 +13,7 @@ public class AutomationExercise {
     @FindBy (xpath = "//*[@style='font-size: 16px;']")
     public WebElement product;
 
-    @FindBy (xpath = "//*[text()='All Products']")
+    @FindBy (className = "title text-center")
     public WebElement allProduct;
 
     @FindBy (xpath = "(//*[@class='fa fa-shopping-cart'])[2]")
