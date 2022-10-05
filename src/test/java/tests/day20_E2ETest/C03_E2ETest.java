@@ -2,10 +2,9 @@ package tests.day20_E2ETest;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HotelMyCamp;
+import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -14,7 +13,7 @@ public class C03_E2ETest {
     public void E2ETest() throws InterruptedException {
         //https://www.hotelmycamp.com adresine git.
         Driver.getDriver().get(ConfigReader.getProperty("hotelmycamp"));
-        HotelMyCamp hotelMyCamp = new HotelMyCamp();
+        HotelMyCampPage hotelMyCamp = new HotelMyCampPage();
         hotelMyCamp.login.click();
         //Username textbox ve password metin kutularını locate edin ve asagidaki verileri
         //Username : manager

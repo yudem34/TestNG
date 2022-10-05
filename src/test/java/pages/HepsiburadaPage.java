@@ -20,5 +20,4 @@ public class HepsiburadaPage {
     @FindBy (xpath = "//div[1]/ul/li/div/ul/li/ul/li/a")
     public List<WebElement> bilTabListesi;
 
-
 }

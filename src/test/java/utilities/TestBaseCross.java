@@ -5,22 +5,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 
-public abstract class TestBaseBeforeClassAfterClass {
+public class TestBaseCross {
     protected WebDriver driver;
 
     // @BeforeClass ve @AfterClass notasyonlarını TestNG de kullanırken JUnit'teki gibi static yapmaya gerek yoktur
-    @BeforeClass (groups = "gp1")
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+    @Parameters("browser")
+    @BeforeClass
+    public void setUp(@Optional String browser) {
+
+        driver = CrossDriver.getDriver(browser);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
-    @AfterClass (groups = "gp1")
+    @AfterClass
     public void tearDown() {
-        driver.quit();
+        CrossDriver.closeDriver();
     }
 }

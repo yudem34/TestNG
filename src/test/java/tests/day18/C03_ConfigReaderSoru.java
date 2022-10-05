@@ -2,7 +2,7 @@ package tests.day18;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HotelMyCamp;
+import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -12,7 +12,7 @@ public class C03_ConfigReaderSoru {
         // https://www.hotelmycamp.com adresine git
         /*String hotelmycamp= ConfigReader.getProperty("hotelmycamp");*/
         Driver.getDriver().get(ConfigReader.getProperty("hotelmycamp"));
-        HotelMyCamp hotelMyCamp=new HotelMyCamp();
+        HotelMyCampPage hotelMyCamp=new HotelMyCampPage();
         // login butonuna bas
         hotelMyCamp.login.click();
         // test data username: manager,
