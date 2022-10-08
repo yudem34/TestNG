@@ -1,5 +1,4 @@
-package tests.automationexercise;
-
+package tests.autoexam;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,11 +7,9 @@ import org.testng.annotations.Test;
 import pages.AutomationExercise;
 import utilities.ConfigReader;
 import utilities.Driver;
-
 public class Soru23 {
     @Test
     public void test01() throws InterruptedException {
-
         // 2. 'http://automationexercise.com' url'sine gidin
         Driver.getDriver().get(ConfigReader.getProperty("autoE"));
         // 3. Ana sayfanın başarıyla görünür olduğunu doğrulayın
@@ -61,8 +58,5 @@ public class Soru23 {
         // 15. 'HESAP SİLİNDİ!' seçeneğini doğrulayın. ve 'Devam' düğmesini tıklayın
         Assert.assertTrue(autoE.hesapSilindi.isDisplayed());
         Driver.closeDriver();
-
     }
 }
-
-

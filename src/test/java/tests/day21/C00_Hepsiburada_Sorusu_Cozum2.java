@@ -23,7 +23,7 @@ public class C00_Hepsiburada_Sorusu_Cozum2 {
             actions.moveToElement(hepsiburada.bilgisayarTabletMenusu).perform();
             Thread.sleep(500);
             hepsiburada.bilTabListesi.get(i).click();
-            ReusableMethods.getScreenshot("hb");
+            ReusableMethods.getScreenshot("hepsiburada "+hepsiburada.pageTitle.getText()+" sayfasi");
             Driver.getDriver().navigate().back();
             Thread.sleep(500);
         }

@@ -13,7 +13,7 @@ public class C02_SoftAssert extends TestBaseCross {
     @Test
     public void test01() {
         //1-amazon anasayfaya gidin
-        driver.get("https://amazon.com");
+        driver.get("https://www.amazon.com");
         //2-title in Amazon içerdigini test edin
         Assert.assertTrue(driver.getTitle().contains("Amazon"));
         //3-arama kutusnun erişilebilir oldugunu tets edin

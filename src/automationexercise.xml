@@ -2,7 +2,7 @@
 <suite name="automationexercise">
     <test name="classlar">
         <classes>
-            <class name="tests.automationexercise.Soru23"/>
+            <class name="tests.autoexam.Soru23"/>
         </classes>
     </test>
 </suite>

@@ -14,7 +14,7 @@ public class C03_SoftAssert extends TestBaseCross {
 
         SoftAssert softAssert = new SoftAssert();
         //1-amazon anasayfaya gidin
-        driver.get("https://amazon.com");
+        driver.get("https://www.amazon.com");
         //2-title in Amazon içerdigini test edin
         softAssert.assertTrue(driver.getTitle().contains("Amazon"),"Yazılan kelimeyi icermiyor");
         //3-arama kutusnun erişilebilir oldugunu tets edin
