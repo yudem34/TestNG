@@ -3,8 +3,10 @@ package tests.day17;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pages.AmazonPage;
 import utilities.Driver;
 import utilities.TestBaseBeforMethodAfterMethod;
 import utilities.TestBaseBeforeClassAfterClass;
@@ -28,6 +30,8 @@ public class C00_Odev extends TestBaseBeforeClassAfterClass {
         WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella", Keys.ENTER);
         WebElement sonucElementi = driver.findElement(By.xpath("//*[@class='a-section a-spacing-small a-spacing-top-small']"));
+        int amazonSonucSayisi= Integer.parseInt(sonucElementi.getText().split(" ")[0].replace("-",""));
+
         softAssert.assertTrue(sonucElementi.getText().contains("Nutella"), "eslesme olmadi");
         softAssert.assertAll();
     }
